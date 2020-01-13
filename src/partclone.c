@@ -318,7 +318,7 @@ void parse_options(int argc, char **argv, cmd_opt* opt) {
 #elif RESTORE
 	static const char *sopt = "-hvd::L:o:O:s:f:CFINiqWBz:E:n:Tt";
 #elif DD
-	static const char *sopt = "-hvd::L:o:O:s:f:CFINiqWBz:E:n:Tt";
+	static const char *sopt = "-hvd::L:Do:O:s:f:RCFINiqWBz:E:a:k:Kn:Tt";
 #else
 	static const char *sopt = "-hvd::L:cx:brDo:O:s:f:RCFINiqWBz:E:a:k:Kn:Tt";
 #endif

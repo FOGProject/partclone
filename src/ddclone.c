@@ -30,7 +30,9 @@ void read_super_blocks(char* device, file_system_info* fs_info)
 	}
 	strncpy(fs_info->fs, raw_MAGIC, FS_MAGIC_SIZE);
 	fs_info->block_size  = PART_SECTOR_SIZE;
-	//fs_info->device_size = get_partition_size(&src);
+#ifdef IMG
+    fs_info->device_size = get_partition_size(&src);
+#endif
 	fs_info->totalblock  = fs_info->device_size / PART_SECTOR_SIZE;
 	fs_info->usedblocks  = fs_info->device_size / PART_SECTOR_SIZE;
 	close(src);
